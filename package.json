@@ -1,0 +1,23 @@
+{
+  "name": "webserver",
+  "version": "0.1.0",
+  "description": "Proyecto para la creación de un webserver",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BetoSalas2015/Nodejs-Webserver2024.git"
+  },
+  "keywords": [
+    "nodejs",
+    "webserver"
+  ],
+  "author": "Roberto Salazar Márquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BetoSalas2015/Nodejs-Webserver2024/issues"
+  },
+  "homepage": "https://github.com/BetoSalas2015/Nodejs-Webserver2024#readme"
+}
