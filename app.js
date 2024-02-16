@@ -1,15 +1,22 @@
-const http = require('http');
+const express = require('express');
+const app = express();
+const port = 8080;
 
-http.createServer( (request, response) => {
-    response.setHeader('Content-Disposition', 'attatchment; filename="nombres.csv"')
-    response.writeHead(200, { 'Content-type': 'application/csv'});
+app.use(express.static('public'));
 
-    response.write('id, nombre\n')
-    response.write('1, Raul\n')
-    response.write('2, José\n')
-    response.write('3, Esteban\n')
-    response.write('4, Edmundo\n')
-    response.write('5, Jimena\n')
-    response.end();
+app.get('/index', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html')
+});
 
-}).listen(8080);
+app.get('/elements', (req, res) => {
+    res.sendFile(__dirname + '/public/elements.html')
+});
+
+
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/public/404.html');
+});
+
+app.listen(port,  () => {
+    console.log(`Aplicación de ejemplo: Escuchando el puerto http://localhost:${port}`);
+});

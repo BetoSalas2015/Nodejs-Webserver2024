@@ -1,0 +1,4 @@
+##  Archivos a Omitir en el repositorio
+
+## Directorios a omitir en el repositorio
+node_modules/
