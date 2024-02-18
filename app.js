@@ -1,7 +1,9 @@
 const express = require('express');
 const hbs = require('hbs');
+require('dotenv').config();
+
 const app = express();
-const port = 8080;
+const port = process.env.PORT;
 
 //  Handlebars
 app.set('view engine', 'hbs');
@@ -30,6 +32,14 @@ app.get('/generic', function (req, res) {
     titulo: 'curso de node'
   });
 });
+
+app.get('/generic.html', function (req, res) {
+  res.render('generic.hbs', {
+    nombre: 'Roberto Salazar',
+    titulo: 'curso de node'
+  });
+});
+ 
 
 app.get('/elements.html', function (req, res) {
   res.render('elements.hbs', {
